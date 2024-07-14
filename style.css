@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --primary:#f3e415;
+    --text1:#333333;
+    --text2:#ffffff33;
+    --light:#f3f4f6;
+    --max-width: 1600px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+input::placeholder{
+    color: var(--light);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(assets/movie1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.nav-logo a{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--light);
+    letter-spacing: 1.3px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-links .link{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--light);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-links .link:hover{
+    color: var(--primary);
+}
+
+.search-bar{
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--light);
+}
+
+.search-bar input{
+    color: var(--light);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.search-bar i{
+    color: var(--light);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem;
+    padding-top: 100px;
+    position: relative;
+}
+
+.container-left,.container-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-left .content{
+    max-width: 80%;
+    display: grid;
+    gap: 1rem;
+}
+
+.content h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    color: var(--light);
+    font-weight: 700;
+}
+
+.content p{
+    color: var(--light);
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.btns button{
+    padding: 0.5rem 2rem;
+    color: var(--light);
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--light);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.explore{
+    background-color: var(--light);
+    color: var(--text1);
+}
+
+button.explore:hover{
+    background-color: var(--text2);
+    color: var(--light);
+}
+
+button.find:hover{
+    background-color: var(--text2);
+}
+
+.chevrons{
+    display: flex;
+    gap: 1rem;
+}
+
+.chevrons span{
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.chevrons span:hover{
+    background-color: var(--text2);
+}
+
+
+.container-right{
+    justify-content: flex-end;
+}
+
+form{
+    width: 60%;
+    display: grid;
+    border-radius: 5px;
+    background-color: var(--text2);
+    color: var(--light);
+}
+
+form h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 2rem;
+}
+
+.form-group{
+    display: grid;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-group input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--light);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--light);
+}
+
+form button{
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: orangered;
+    color: var(--light);
+    cursor: pointer;
+    transition: 0.4s ease-out;
+}
+
+form button:hover{
+    background-color: rgb(173, 46, 0);
+}
+
+.bottom-tracker{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap:1rem;
+}
+
+.bottom-tracker span{
+    display: inline-block;
+    height: 4px;
+    width: 100px;
+    background-color: var(--text2);
+}
+
+.bottom-tracker span:nth-child(2){
+    background-color: var(--light);
+}
